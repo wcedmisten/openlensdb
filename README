@@ -11,3 +11,12 @@ docker compose -f docker-compose-dev.yml build
 ```sh
 docker compose -f docker-compose-dev.yml up
 ```
+
+# Troubleshooting
+
+If you get an error like: `vite: command not found` in the frontend container, you need to run:
+
+```sh
+cd frontend/openlensdb
+npm install
+```
