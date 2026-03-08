@@ -1,0 +1,37 @@
+[{
+    "model_name": "Sigma 18-50mm F2.8 DC DN | Contemporary",
+    "zoom_type": "zoom",
+    "focal_length_min": 18,
+    "focal_length_max": 50,
+    "aperture_min": 2.8,
+    "aperture_max": 22,
+    "mounts": ["Sony E"]
+},
+{
+    "model_name": "Sigma 30mm F1.4 DC DN | Contemporary",
+    "zoom_type": "prime",
+    "focal_length_min": 30,
+    "focal_length_max": 30,
+    "aperture_min": 1.4,
+    "aperture_max": 16,
+    "mounts": ["Sony E"]
+},
+{
+    "model_name": "Sigma 56mm F1.4 DC DN | Contemporary",
+    "zoom_type": "prime",
+    "focal_length_min": 56,
+    "focal_length_max": 56,
+    "aperture_min": 1.4,
+    "aperture_max": 16,
+    "mounts": ["Sony E"]
+},
+{
+    "model_name": "Sigma 16mm F1.4 DC DN | Contemporary",
+    "zoom_type": "prime",
+    "focal_length_min": 16,
+    "focal_length_max": 16,
+    "aperture_min": 1.4,
+    "aperture_max": 16,
+    "mounts": ["Sony E"]
+}
+]
