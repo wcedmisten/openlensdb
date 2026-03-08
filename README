@@ -1,1 +1,13 @@
-An open website and database for camera lens models.
+# Open Lens DB
+
+An open source website and database for camera lens models.
+
+# Developing
+
+```sh
+docker compose -f docker-compose-dev.yml build
+```
+
+```sh
+docker compose -f docker-compose-dev.yml up
+```

@@ -1,0 +1,11 @@
+FROM node:24-alpine
+
+WORKDIR /deps
+
+COPY openlensdb/package.json /deps/package.json
+
+RUN npm install
+
+WORKDIR /openlensdb
+
+ENV NODE_PATH=/deps/node_modules

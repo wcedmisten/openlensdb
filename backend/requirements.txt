@@ -1,0 +1,4 @@
+fastapi[all]
+psycopg[binary,pool]
+python-jose[cryptography]
+passlib
