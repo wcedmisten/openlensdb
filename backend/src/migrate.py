@@ -9,8 +9,10 @@ POSTGRES_PASSWORD = os.environ["POSTGRES_PASSWORD"]
 migrations = [
     # create lenses table
     "DROP TABLE IF EXISTS lenses;",
-    "CREATE TABLE IF NOT EXISTS lenses (" "model_name TEXT," "zoom_type TEXT," "focal_length_min INTEGER," "focal_length_max INTEGER," "aperture_min FLOAT," "aperture_max FLOAT," "mounts TEXT[]" ");",
+    "CREATE TABLE IF NOT EXISTS lenses (" "id INTEGER," "model_name TEXT," "zoom_type TEXT," "focal_length_min INTEGER," "focal_length_max INTEGER," "aperture_min FLOAT," "aperture_max FLOAT," "mounts TEXT[]" ");",
 ]
+
+print(f"running {len(migrations)} migrations")
 
 with psycopg.connect(dbname="postgres",
     user="postgres",
@@ -27,10 +29,10 @@ with psycopg.connect(dbname="postgres",
         data = f.read()
         lenses = json.loads(data)
         with conn.cursor() as cur:
-            for lens in lenses:
+            for idx, lens in enumerate(lenses):
                 cur.execute(
-                    "INSERT INTO lenses (model_name, zoom_type, focal_length_min, focal_length_max, aperture_min, aperture_max, mounts) " + 
-                    " VALUES (%s, %s, %s, %s, %s, %s, %s)",
-                    (lens["model_name"], lens["zoom_type"], lens["focal_length_min"],
+                    "INSERT INTO lenses (id, model_name, zoom_type, focal_length_min, focal_length_max, aperture_min, aperture_max, mounts) " + 
+                    " VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",
+                    (idx + 1, lens["model_name"], lens["zoom_type"], lens["focal_length_min"],
                     lens["focal_length_max"], lens["aperture_min"], lens["aperture_max"], lens["mounts"]))
             conn.commit()

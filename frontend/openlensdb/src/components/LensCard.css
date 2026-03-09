@@ -1,0 +1,17 @@
+/* lens card div should have a white background and rounded borders */
+.lens-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lens-card-text {
+    color: #333;
+}
+
+.lens-card-text-item {
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
