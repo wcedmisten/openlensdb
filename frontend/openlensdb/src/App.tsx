@@ -1,9 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { LensCard } from './components/LensCard'
 import type { Lens } from './types/Lens'
+
+// import tanstack/react-table
+import { useReactTable, getCoreRowModel } from '@tanstack/react-table'
+import LensTable from './components/LensTable'
 
 function App() {
   // fetch the lenses from GET /api/lenses
@@ -37,12 +41,7 @@ function App() {
       </div>
       {!!searchedTerm && <div>Search results for: {searchedTerm}</div>}
       <div className="lenses">
-        {!!lenses && lenses.map((lens) => { 
-          return <div key={lens.id}>
-            <LensCard lens={lens} key={lens.id} />
-            <a href={`/lens/?id=${lens.id}`}>View Details</a>
-          </div>
-        })}
+        {lenses && <LensTable data={lenses} />}
       </div>
     </div>
   )

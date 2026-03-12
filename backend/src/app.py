@@ -43,7 +43,7 @@ async def get_lenses(search: str = None):
 
 
 @app.get("/lens/{lens_id}")
-async def get_lens(lens_id: int):
+async def get_lens(lens_id: str):
     # fetch the lens from the database and return it as JSON
     with psycopg.connect(dbname="postgres",
         user="postgres",

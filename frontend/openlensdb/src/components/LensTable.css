@@ -1,0 +1,9 @@
+.striped-table tbody tr:nth-of-type(odd) {
+  background-color: #333232; /* Light gray for odd rows */
+  color: white
+}
+
+.striped-table tbody tr:nth-of-type(even) {
+  background-color: #ffffff; /* White for even rows (optional, default is usually white) */
+  color: black;
+}
