@@ -1,12 +1,7 @@
-import { useEffect, useMemo, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
-import { LensCard } from './components/LensCard'
 import type { Lens } from './types/Lens'
 
-// import tanstack/react-table
-import { useReactTable, getCoreRowModel } from '@tanstack/react-table'
 import LensTable from './components/LensTable'
 
 function App() {
@@ -30,7 +25,7 @@ function App() {
   // visualize them as a list of cards
   return (
     <div className="App">
-      <h1>OpenLensDB</h1>
+      <h1><a className="logo" href="/">OpenLensDB</a></h1>
       <div className="search">
         <input type="text" placeholder="Search for a lens..." onChange={
           (e) => setSearchTerm(e.currentTarget.value)} />

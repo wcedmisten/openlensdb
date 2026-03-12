@@ -19,15 +19,14 @@ function App() {
     useEffect(() => {
     fetch(`/api/lens/${lensID}`)
       .then((response) => response.json())
-      .then((data) => setLens(data))
+      .then((data: Lens) => setLens(data))
   }, [lensID])
 
   // visualize them as a list of cards
   return (
     <div className="App">
-      <h1>OpenLensDB</h1>
+      <h1><a className="logo" href="/">OpenLensDB</a></h1>
       <div className="lenses">
-        {params.get("id")}
         {!!lens && <LensCard lens={lens} />}
       </div>
     </div>

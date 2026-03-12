@@ -13,6 +13,7 @@ export default function LensTable(props: { data: Lens[] }) {
     const columns = [
         columnHelper.accessor('model_name', {
             header: () => 'Model Name',
+            cell: (info) => <a href={`/lens/?id=${info.row.original.id}`}>{info.getValue()}</a>,
         }),
         columnHelper.accessor('aperture_max', {
             header: () => 'Max Aperture',
