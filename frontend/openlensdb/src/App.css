@@ -1,7 +1,5 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -14,6 +12,21 @@
 .logo:hover {
   text-decoration: none; /* no underline */
   filter: drop-shadow(0 0 2em #646cffaa);
-  color: rgb(220, 182, 182)
+  color: rgb(229, 150, 150)
 }
 
+.searchWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  
+}
+
+.searchInput {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #111;
+  border-radius: 8px;
+  margin-right: 1rem;
+  width: 300px;
+}

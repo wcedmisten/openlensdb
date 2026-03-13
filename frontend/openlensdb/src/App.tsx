@@ -3,6 +3,7 @@ import './App.css'
 import type { Lens } from './types/Lens'
 
 import LensTable from './components/LensTable'
+import Button from './components/Button';
 
 function App() {
   // fetch the lenses from GET /api/lenses
@@ -26,13 +27,13 @@ function App() {
   return (
     <div className="App">
       <h1><a className="logo" href="/">OpenLensDB</a></h1>
-      <div className="search">
-        <input type="text" placeholder="Search for a lens..." onChange={
+      <div className="searchWrapper">
+        <input className="searchInput" type="text" placeholder="Search for a lens..." onChange={
           (e) => setSearchTerm(e.currentTarget.value)} />
-        <button onClick={() => {
+        <Button onClick={() => {
           setSearchedTerm(searchTerm);
           console.log(searchedTerm);
-        }}>Search</button>
+        }}>Search</Button>
       </div>
       {!!searchedTerm && <div>Search results for: {searchedTerm}</div>}
       <div className="lenses">

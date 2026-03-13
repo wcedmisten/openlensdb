@@ -46,7 +46,7 @@ export default function LensTable(props: { data: Lens[] }) {
             <table className="striped-table">
                 <thead>
                     {table.getHeaderGroups().map((headerGroup) => (
-                        <tr key={headerGroup.id}>
+                        <tr className="row" key={headerGroup.id}>
                             {headerGroup.headers.map((header) => (
                                 <th key={header.id}>
                                     {header.isPlaceholder
@@ -62,7 +62,7 @@ export default function LensTable(props: { data: Lens[] }) {
                 </thead>
                 <tbody>
                     {table.getRowModel().rows.map((row) => (
-                        <tr key={row.id}>
+                        <tr className="row" key={row.id}>
                             {row.getVisibleCells().map((cell) => (
                                 <td key={cell.id}>
                                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -73,7 +73,7 @@ export default function LensTable(props: { data: Lens[] }) {
                 </tbody>
                 <tfoot>
                     {table.getFooterGroups().map((footerGroup) => (
-                        <tr key={footerGroup.id}>
+                        <tr className="row" key={footerGroup.id}>
                             {footerGroup.headers.map((header) => (
                                 <th key={header.id}>
                                     {header.isPlaceholder

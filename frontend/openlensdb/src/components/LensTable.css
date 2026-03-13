@@ -1,9 +1,27 @@
 .striped-table tbody tr:nth-of-type(odd) {
   background-color: #333232; /* Light gray for odd rows */
-  color: white
+  color: rgb(244, 236, 236);
+  font-family: DMSans-Regular, sans-serif;
 }
 
 .striped-table tbody tr:nth-of-type(even) {
-  background-color: #ffffff; /* White for even rows (optional, default is usually white) */
-  color: black;
+  background-color: #d2caca; /* White for even rows (optional, default is usually white) */
+  color: rgb(37, 35, 35);
+  font-family: DMSans-Regular, sans-serif;
+}
+
+.row {
+  height:40px; border:2px solid rgb(26, 22, 22);
+}
+
+.striped-table tbody tr:nth-of-type(even) a {
+  font-weight: 500;
+  color: #3b3f5b;
+  text-decoration: inherit;
+}
+
+.striped-table tbody tr:nth-of-type(odd) a {
+  font-weight: 500;
+  color: #b7bbe2;
+  text-decoration: inherit;
 }
